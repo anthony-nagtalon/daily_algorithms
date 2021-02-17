@@ -15,12 +15,6 @@ class SelectionSorter : Sorter {
             array[i] = temp
         }
 
-        if(timed) println("Sort completed: ${System.currentTimeMillis() - start} ms")
+        if(timed) println("${this::class.simpleName}: ${System.currentTimeMillis() - start} ms")
     }
-}
-
-fun main() {
-    val array = intArrayOf(2,4,5,1,62,23,635,23,4,1,8,0)
-    SelectionSorter().sort(array, true)
-    SelectionSorter().printBoard(array)
 }
