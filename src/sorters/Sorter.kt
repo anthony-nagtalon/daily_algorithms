@@ -1,5 +1,7 @@
 package sorters
 
+import kotlin.random.Random
+
 interface Sorter {
     fun sort(array : IntArray, timed : Boolean)
 
@@ -18,17 +20,13 @@ interface Sorter {
 }
 
 fun main() {
-    var array = intArrayOf(2,4,5,1,62,23,635,23,4,1,8,0)
-    BubbleSorter().sort(array, true)
+    var array = IntArray(20) { Random.nextInt(0, 200)}
 
-    array = intArrayOf(2,4,5,1,62,23,635,23,4,1,8,0)
-    SelectionSorter().sort(array, true)
-
-    array = intArrayOf(2,4,5,1,62,23,635,23,4,1,8,0)
-    InsertionSorter().sort(array, true)
-
-    array = intArrayOf(2,4,5,1,62,23,635,23,4,1,8,0)
-    MergeSorter().sort(array, true)
+    //BubbleSorter().sort(array, true)
+    //SelectionSorter().sort(array, true)
+    //InsertionSorter().sort(array, true)
+    //MergeSorter().sort(array, true)
+    QuickSorter().sort(array, true)
 
     SelectionSorter().printBoard(array)
 }
