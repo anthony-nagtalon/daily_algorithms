@@ -20,13 +20,14 @@ interface Sorter {
 }
 
 fun main() {
-    var array = IntArray(20) { Random.nextInt(0, 200)}
+    val array = IntArray(20) { Random.nextInt(0, 200)}
 
     //BubbleSorter().sort(array, true)
     //SelectionSorter().sort(array, true)
     //InsertionSorter().sort(array, true)
     //MergeSorter().sort(array, true)
-    QuickSorter().sort(array, true)
+    //QuickSorter().sort(array, true)
+    HeapSorter().sort(array, true)
 
     SelectionSorter().printBoard(array)
 }
