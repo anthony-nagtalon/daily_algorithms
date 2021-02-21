@@ -27,7 +27,8 @@ fun main() {
     //InsertionSorter().sort(array, true)
     //MergeSorter().sort(array, true)
     //QuickSorter().sort(array, true)
-    HeapSorter().sort(array, true)
+    //HeapSorter().sort(array, true)
+    CountingSorter().sort(array, true)
 
     SelectionSorter().printBoard(array)
 }
